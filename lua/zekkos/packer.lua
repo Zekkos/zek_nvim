@@ -64,6 +64,12 @@ return require('packer').startup(function(use)
         require('render-markdown').setup({})
     end,
 })
+    use {
+        "danymat/neogen",
+        config = function()
+            require('neogen').setup({})
+        end,
+    }
 	if packer_bootstrap then
 		require('packer').sync()
 	end
