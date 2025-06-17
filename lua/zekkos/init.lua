@@ -11,3 +11,9 @@ vim.o.shiftwidth = 4 -- Number of spaces inserted when indenting
 vim.wo.number = true
 vim.wo.relativenumber = true
 
+-- Configuring nvim-tree.lua
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrmPlugin = 1
+vim.opt.termguicolors = true
+require("nvim-tree").setup()
+

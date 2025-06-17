@@ -33,6 +33,7 @@ return require('packer').startup(function(use)
   use( "theprimeagen/harpoon" )
   use( "mbbill/undotree" )
   use( "tpope/vim-fugitive" )
+  use( "nvim-tree/nvim-tree.lua" )
   use {
 	  'VonHeikemen/lsp-zero.nvim',
 	  branch = 'v3.x',
@@ -72,6 +73,14 @@ return require('packer').startup(function(use)
             require('neogen').setup({})
         end,
     }
+
+    use ({
+        "andrewferrier/wrapping.nvim",
+        config = function()
+            require("wrapping").setup()
+        end,
+    })
+
 	if packer_bootstrap then
 		require('packer').sync()
 	end
