@@ -1,6 +1,5 @@
 require("zekkos.packer")
 require("zekkos.remap")
-print("Hello from the Zek")
 
 
 vim.o.tabstop = 4 -- A TAB character looks like 4 spaces
@@ -10,6 +9,10 @@ vim.o.shiftwidth = 4 -- Number of spaces inserted when indenting
 
 vim.wo.number = true
 vim.wo.relativenumber = true
+
+-- Setting up spelling
+vim.opt.spell = true
+vim.opt.spelllang = 'en_nz'
 
 -- Configuring nvim-tree.lua
 vim.g.loaded_netrw = 1

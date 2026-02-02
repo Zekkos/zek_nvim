@@ -1,13 +1,16 @@
 local lsp_zero = require('lsp-zero')
-local lsp_cfg = require('lspconfig')
 
-lsp_cfg.clangd.setup{
-	cmd = { 'clangd', '--query-driver=/usr/bin/arm-none-eabi-gcc' },
-}
 
-lsp_cfg.zls.setup{}
+vim.lsp.enable('clangd')
+vim.lsp.enable('zls')
+vim.lsp.enable('pyright')
 
-lsp_cfg.pyright.setup{}
+vim.lsp.config('clangd', {
+    settings = {
+    	cmd = { 'clangd', '--query-driver=/usr/bin/arm-none-eabi-gcc' },
+    }
+})
+
 
 lsp_zero.on_attach(function(client, bufnr)
 	lsp_zero.default_keymaps({buffer = bufnr})
