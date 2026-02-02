@@ -1,9 +1,16 @@
-local lsp_zero = require('lsp-zero')
-
-
 vim.lsp.enable('clangd')
 vim.lsp.enable('zls')
 vim.lsp.enable('pyright')
+vim.lsp.enable('rust_analyzer')
+vim.lsp.config('rust_analyzer', {
+settings = {
+  ['rust-analyzer'] = {
+    diagnostics = {
+      enable = false;
+    }
+  }
+}
+})
 
 vim.lsp.config('clangd', {
     settings = {
@@ -12,9 +19,6 @@ vim.lsp.config('clangd', {
 })
 
 
-lsp_zero.on_attach(function(client, bufnr)
-	lsp_zero.default_keymaps({buffer = bufnr})
-end)
 
 local cmp_autopairs = require('nvim-autopairs.completion.cmp')
 local cmp = require('cmp')
