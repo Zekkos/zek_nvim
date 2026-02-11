@@ -20,6 +20,9 @@ require("formatter").setup {
     lua = {
       require("formatter.filetypes.lua").stylua,
     },
+    rust = {
+      require("formatter.filetypes.rust").rustfmt,
+    },
 
     -- Use the special "*" filetype for defining formatter configurations on
     -- any filetype
@@ -32,4 +35,3 @@ require("formatter").setup {
     }
   }
 }
-
