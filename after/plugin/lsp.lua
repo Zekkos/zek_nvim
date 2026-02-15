@@ -2,6 +2,7 @@ vim.lsp.enable('clangd')
 vim.lsp.enable('zls')
 vim.lsp.enable('pyright')
 vim.lsp.enable('rust_analyzer')
+vim.lsp.enable('texlab')
 vim.lsp.config('rust_analyzer', {
 settings = {
   ['rust-analyzer'] = {

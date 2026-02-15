@@ -1,0 +1,3 @@
+[submodule "parsers/tree-sitter-latex"]
+	path = parsers/tree-sitter-latex
+	url = https://github.com/latex-lsp/tree-sitter-latex
